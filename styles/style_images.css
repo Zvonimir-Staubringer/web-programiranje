@@ -1,11 +1,5 @@
-/* ============================================
-   FONT
-   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
 
-/* ============================================
-   VARIJABLE (PREUZETE IZ PRIJAŠNJEG CSS-a)
-   ============================================ */
 :root {
   --boja-primarna: #0d2137;
   --boja-sekundarna: #1a3a5c;
@@ -22,18 +16,12 @@
   --sjena: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* ============================================
-   RESET
-   ============================================ */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ============================================
-   BODY (IZMJENA 1: TAMNA TEMA)
-   ============================================ */
 body {
   font-family: var(--font-tekst);
   background: var(--boja-pozadina);
@@ -44,47 +32,46 @@ body {
     radial-gradient(circle at 80% 20%, rgba(232,93,4,0.1), transparent);
 }
 
-/* ============================================
-   HEADER (IZMJENA 2)
-   ============================================ */
 header {
   background: linear-gradient(135deg, var(--boja-primarna), var(--boja-sekundarna));
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+  padding: 1.5rem;
   border-bottom: 3px solid var(--boja-akcent);
+  text-align: center;
 }
 
 .header-title {
   font-family: var(--font-naslov);
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 3px;
 }
 
-/* ============================================
-   NAVIGATION (IZMJENA 3)
-   ============================================ */
 nav {
-  background: var(--boja-kartica);
-  position: sticky;
-  top: 0;
+	background: var(--boja-kartica);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .nav-menu {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
 }
 
 .nav-menu li a {
-  padding: 12px 20px;
-  color: var(--boja-tekst);
-  text-decoration: none;
-  transition: 0.3s;
+	display: block;
+	padding: 12px 20px;
+	text-decoration: none;
+	color: var(--boja--tekst);
+	font-weight: 600;
+	transition: 0.3s;
 }
 
-.nav-menu li a:hover {
-  color: var(--boja-akcent);
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+	color: #fff;
+	background: var(--boja-akcent);
 }
 
 /* ============================================
@@ -112,9 +99,7 @@ main {
   color: var(--boja-akcent);
 }
 
-/* ============================================
-   GALLERY GRID
-   ============================================ */
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -122,9 +107,7 @@ main {
   justify-content: center;
 }
 
-/* ============================================
-   GALLERY ITEM (IZMJENA 5)
-   ============================================ */
+
 .gallery-item {
   width: 100%;
   border-radius: var(--zaobljenje);
@@ -135,14 +118,12 @@ main {
   transition: transform 0.3s ease;
 }
 
-/* hover kartice */
+
 .gallery-item:hover {
   transform: translateY(-5px);
 }
 
-/* ============================================
-   IMAGE (IZMJENA 6)
-   ============================================ */
+
 .gallery-item img {
   width: 100%;
   display: block;
@@ -156,9 +137,6 @@ main {
   filter: brightness(1) saturate(1.2);
 }
 
-/* ============================================
-   CAPTION
-   ============================================ */
 .gallery-item figcaption {
   padding: 10px;
   text-align: center;
@@ -166,9 +144,7 @@ main {
   background: rgba(0,0,0,0.3);
 }
 
-/* ============================================
-   LIGHTBOX (IZMJENA 7)
-   ============================================ */
+
 .lightbox {
   display: none;
   position: fixed;
@@ -186,9 +162,7 @@ main {
   display: flex;
 }
 
-/* ============================================
-   LIGHTBOX CONTENT
-   ============================================ */
+
 .lightbox-content img {
   max-width: 90%;
   max-height: 80vh;
@@ -210,9 +184,7 @@ main {
   color: var(--boja-akcent);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+
 footer {
   text-align: center;
   padding: 15px;
@@ -220,9 +192,7 @@ footer {
   color: rgba(232,237,242,0.6);
 }
 
-/* ============================================
-   ANIMACIJE (PREUZETE)
-   ============================================ */
+
 .gallery-item {
   animation: fadeIn 0.6s ease both;
 }
@@ -232,9 +202,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+
 @media (min-width: 600px) {
   .gallery-item {
     width: calc(50% - 16px);
@@ -247,9 +215,10 @@ footer {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   .nav-menu {
     flex-direction: column;
+    gap: 10px;
     text-align: center;
   }
 }

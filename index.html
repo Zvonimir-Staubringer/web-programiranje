@@ -16,6 +16,7 @@
   <!-- Vanjski CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
+<body>
 <!-- ==================== HEADER ==================== -->
 	<header>
 		<h1 class="header-title">Movie Database</h1>
@@ -71,13 +72,9 @@
 				<aside class="image-aside" aria-label="Featured movie">
 					<figure>
 						<picture>
-							<!-- Desktop image (width >= 769px) -->
-							<source media="(min-width: 769px)" src="./images/magnolia.jpg">
-
-							<!-- Mobile image (width < 769px) -->
-							<source media="(max-width: 768px)" src="./images/sentimental_value.jpg">
-
-							<img src="./images/magnolia.jpg" alt="Magnolia" role="img" aria-describedby="image-description" class="featured-image">
+							<source srcset="./Images/magnolia.jpg" media="(min-width: 768px)">
+							<source srcset="./Images/sentimental_value.jpg" media="(max-width: 767px)">
+							<img src="./Images/magnolia.jpg" alt="Magnolia" role="img" aria-describedby="image-description" class="featured-image">
 						</picture>
 
 						<figcaption id="image-description">
@@ -116,6 +113,6 @@
 	<!-- ==================== FOOTER ==================== -->
 	<footer>
 		<p>&copy; 2026. Web Programming. All rights reserved.</p>
-	</footer>
+	</footer>	
 </body>
 </html>

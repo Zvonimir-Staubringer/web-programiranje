@@ -1,6 +1,9 @@
 /* ============================================
    VARIJABLE
    ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+
+  
 :root {
   --boja-primarna: #0d2137;
   --boja-sekundarna: #1a3a5c;
@@ -62,26 +65,32 @@ header {
    NAVIGATION (jednostavna verzija)
    ============================================ */
 nav {
-  background: var(--boja-kartica);
-  padding: 0.5rem 0;
+	background: var(--boja-kartica);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style: none;
 }
 
-.nav-menu a {
-  text-decoration: none;
-  color: var(--boja-tekst);
-  font-weight: 500;
-  transition: 0.3s;
+.nav-menu li a {
+	display: block;
+	padding: 12px 20px;
+	text-decoration: none;
+	color: var(--boja--tekst);
+	font-weight: 600;
+	transition: 0.3s;
 }
 
-.nav-menu a:hover {
-  color: var(--boja-akcent);
+.nav-menu li a:hover,
+.nav-menu li a:focus {
+	color: #fff;
+	background: var(--boja-akcent);
 }
 
 /* ============================================
@@ -240,15 +249,16 @@ footer {
 /* ============================================
    RESPONSIVE
    ============================================ */
-@media (max-width: 900px) {
+@media (max-width: 767px) {
   .table-image-layout {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .nav-menu {
     flex-direction: column;
     gap: 10px;
+    text-align: center;
   }
 }
