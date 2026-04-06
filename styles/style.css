@@ -21,33 +21,23 @@
   --sjena: 0 6px 20px rgba(0,0,0,0.4);
 }
 
-/* ============================================
-   RESET
-   ============================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ============================================
-   BODY
-   ============================================ */
 body {
   font-family: var(--font-tekst);
   background: var(--boja-pozadina);
   color: var(--boja-tekst);
   min-height: 100vh;
 
-  /* IZMJENA 1: modernija pozadina */
   background-image:
     radial-gradient(circle at 20% 50%, rgba(26,58,92,0.2), transparent),
     radial-gradient(circle at 80% 20%, rgba(232,93,4,0.1), transparent);
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
 header {
   background: linear-gradient(135deg, var(--boja-primarna), var(--boja-sekundarna));
   padding: 1.5rem;
@@ -61,9 +51,6 @@ header {
   letter-spacing: 3px;
 }
 
-/* ============================================
-   NAVIGATION (jednostavna verzija)
-   ============================================ */
 nav {
 	background: var(--boja-kartica);
 	position: sticky;
@@ -93,9 +80,6 @@ nav {
 	background: var(--boja-akcent);
 }
 
-/* ============================================
-   MAIN LAYOUT
-   ============================================ */
 main {
   max-width: 1200px;
   margin: auto;
